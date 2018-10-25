@@ -9,7 +9,7 @@ module m_init
   integer, parameter :: ncells = 100
   integer :: niter
   
-  real( kind=dp ), parameter :: gamma = 1.4  ! compute at each cell ?
+  real( kind=dp ), parameter :: gamma = 1.4  
   real( kind=dp ) :: xinit, xend, dx, dt, tinit, tend, lambda
   
   real( kind=dp ), dimension( 0:ncells+2 ) :: xcell

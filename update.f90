@@ -14,7 +14,7 @@ subroutine update()
      u3 (i) = u3 (i) - lambda * ( f3 (i) - f3 (i-1) )
      
      u (i) = u2 (i) / u1 (i)
-     p (i) = (gamma-1.) * ( u3 (i) - 0.5 * u2 (i) * u2 (i) / u1 (i) )  !   u3 is rho*E
+     p (i) = (gamma-1.) * ( u3 (i) - 0.5 * u2 (i) * u2 (i) / u1 (i) )  
      a (i) = sqrt( gamma * p (i) / u1 (i) )
   end do
 

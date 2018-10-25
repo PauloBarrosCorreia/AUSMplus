@@ -27,7 +27,7 @@ subroutine initialization()
   xinit = 0.0
   xend = 1.0
   
-  dt = 1e-4                              ! TODO: compute cfl
+  dt = 1e-4                              
   dx = ( xend-xinit ) / dble( ncells)
 
   lambda = dt/dx
@@ -57,11 +57,11 @@ subroutine initialization()
   rhoetl = 0.5 * rhoul*ul + pl/(gamma-1.)
   rhoetr = 0.5 * rhour*ur + pr/(gamma-1.)
 
-  do i = 0, ncells+2                  ! center of cells
+  do i = 0, ncells+2                  
      xcell (i) = i * dx
 
      if (xcell (i) <= diaph) then
-        u1 (i) = rhol                 ! conservative variables
+        u1 (i) = rhol                 
         u2 (i) = rhoul
         u3 (i) = rhoetl
      elseif (xcell (i) > diaph) then
